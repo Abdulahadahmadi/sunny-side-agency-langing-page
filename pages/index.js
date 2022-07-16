@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
+
+  const navigation = [
+    {
+
+    }
+  ]
   return (
     <div className="">
       <Head>
@@ -11,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
+      <Navbar />
     
 
     </div>
