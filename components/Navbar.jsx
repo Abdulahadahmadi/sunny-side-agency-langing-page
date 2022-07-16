@@ -5,10 +5,10 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
 const navigation = [
-    { name: 'About', href: '#', current: true },
+    { name: 'About', href: '#', current: false },
     { name: 'Services', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
-    { name: 'Contact', href: '#', current: false },
+    { name: 'Contact', href: '#', current: true },
 ]
 
 function classNames(...classes) {
@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 function Navbar() {
     return (
-            <Disclosure as="nav" className="bg-gray-800 py-8">
+            <Disclosure as="nav" className="bg-gray-800 py-6">
         {({ open }) => (
             <>
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -32,17 +32,18 @@ function Navbar() {
                     )}
                     </Disclosure.Button>
                 </div>
-
+                
+                <Link href='#'><a className=' text-white text-2xl font-bold sm:ml-4 md:text-4xl lg:text-5xl my-4 lg:py-4 md:mr-20 lg:mr-80 xl:mr-96'>Sunny Side</a></Link>
                 <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
-                    <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-4">
+                    <div className="hidden sm:block sm:ml-6 text-xl">
+                    <div className="flex space-x-4 text-xl">
                         {navigation.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                            'px-3 py-2 rounded-md text-sm font-medium'
+                            item.current ? 'bg-gray-800 text-white  ring-4' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            'px-3 py-2 rounded-md font-medium text-xl'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                         >
@@ -53,9 +54,6 @@ function Navbar() {
                     </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    
-
-                {/* <Link href='#'><a className='text-white text-3xl font-bold md:text-4xl lg:text-5xl my-6 lg:py-4 '>Sunny Side</a></Link> */}
 
                 </div>
                 </div>
