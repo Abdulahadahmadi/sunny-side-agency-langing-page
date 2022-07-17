@@ -18,9 +18,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-    
+      
 
+      <div className=''>
+        <Navbar />
+        {/* <Image className='md:sr-only lg:sr-only xl:sr-only' src="/static/images/mobile/image-header.jpg" alt="sun" layout='responsive' width={600} height={650} /> */}
+        <div className='w-full blu'>
+          <Image className='sm:h-64 ' src="/static/images/desktop/image-header.jpg" alt="sun" layout='responsive' width='1240' height='450' />
+        </div>
+      </div>
+
+
+    {/* end of first div */}
     </div>
   )
 }
