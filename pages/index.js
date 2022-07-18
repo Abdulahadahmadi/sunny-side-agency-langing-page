@@ -23,8 +23,9 @@ export default function Home() {
       <div className=''>
         <Navbar />
         {/* <Image className='md:sr-only lg:sr-only xl:sr-only' src="/static/images/mobile/image-header.jpg" alt="sun" layout='responsive' width={600} height={650} /> */}
-        <div className='w-full blu'>
-          <Image className='sm:h-64 ' src="/static/images/desktop/image-header.jpg" alt="sun" layout='responsive' width='1240' height='450' />
+        <div className='aspect-w-16 aspect-h-9'>
+          <Image className=' ' src="/static/images/desktop/image-header.jpg" alt="sun" layout='responsive' width='1240' height='450' />
+          <Image className='aspec' src='/static/images/desktop/image-transform.jpg' alt='egg' width='1240'  height="340" />
         </div>
       </div>
 
